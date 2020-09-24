@@ -114,7 +114,7 @@ class Calculator {
         if (this.previousOperand !== '' || this.operation === 'square' || this.operation === 'root') {
             switch (this.operation) {
                 case '+':
-                    this.currentOperand = BigNumber(parseFloat(this.currentOperand)) + BigNumber(parseFloat(this.previousOperand));
+                    this.currentOperand = BigNumber(parseFloat(this.currentOperand)).plus(parseFloat(this.previousOperand));
                     break;
                 case '-':
                     this.currentOperand = BigNumber(parseFloat(this.previousOperand)).minus(parseFloat(this.currentOperand));
